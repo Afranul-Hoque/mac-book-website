@@ -93,12 +93,22 @@ document.getElementById('delivery2-button').addEventListener('click', function (
 
 document.getElementById('pomoApply').addEventListener('click', function () {
 
-    const pomoCode = document.getElementById('pomoInput');
-    if (pomoCode.value == 'stevekaku') {
+    const pomoInput = document.getElementById('pomoInput');
+
+    if (pomoInput.value == 'stevekaku') {
+
         const discountTotal = document.getElementById('pomo-Total');
         const TotalCost = parseInt(discountTotal.innerText);
         const discounttk = TotalCost * 20 / 100;
         const pomoCodeTotal = TotalCost - discounttk;
         discountTotal.innerText = pomoCodeTotal;
+        pomoInput.value = '';
+
+        pomoInput.disabled = true;
+
+
     }
+
+
+
 });

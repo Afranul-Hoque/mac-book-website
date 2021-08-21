@@ -47,3 +47,8 @@ hr
 {
     width: 100%;
 }
+.btn-apply
+{
+    color: white;
+    background-color: red;
+}
