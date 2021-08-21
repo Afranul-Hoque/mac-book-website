@@ -1,72 +1,25 @@
-// choose memory and added cost
+// using function for choosing product and cost
 
-function getmemoryPrice(product, price) {
-    const memoryPrice = document.getElementById(product + '-price');
+function getProductsPrice(product, price) {
+    const productPrice = document.getElementById(product + '-price');
     if (price == 0) {
-        memoryPrice.innerText = price;
+        productPrice.innerText = price;
     }
-    else if (price == 180) {
-        memoryPrice.innerText = price;
-
-    }
-    const totalPriceIncrease = document.getElementById('total-price');
-    const newTotalPrice = 1299 + parseInt(memoryPrice.innerText);
-    totalPriceIncrease.innerText = newTotalPrice;
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
-    TotalPrice()
-
-};
-
-
-// function for storage choose and cost
-
-function getStoragePrice(product, price) {
-    const storagePrice = document.getElementById(product + '-price');
-    if (price == 0) {
-        storagePrice.innerText = price;
+    if (price == 20) {
+        productPrice.innerText = price;
     }
     else if (price == 100) {
-        storagePrice.innerText = price;
+        productPrice.innerText = price;
     }
     else if (price == 180) {
-        storagePrice.innerText = price;
+        productPrice.innerText = price;
+
     }
-    const storagePriceIncrease = document.getElementById('total-price');
-    const newTotalPrice = 1299 + parseInt(storagePrice.innerText);
-    storagePriceIncrease.innerText = newTotalPrice;
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
+    // totalPrice call
+
     TotalPrice()
+
 };
-
-// function choose  delivery option and added cost
-
-
-function getDeliveryPrice(product, price) {
-    const deliveryPrice = document.getElementById(product + '-price');
-
-    if (price == 0) {
-        deliveryPrice.innerText = price;
-    }
-    else if (price == 20) {
-        deliveryPrice.innerText = price;
-    }
-
-    const deliveryPriceIncrease = document.getElementById('total-price');
-    const newTotalPrice = 1299 + parseInt(deliveryPrice.innerText);
-    deliveryPriceIncrease.innerText = newTotalPrice;
-
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
-    TotalPrice()
-};
-
-// function getValue(){
-//     const totalMemory = document.getElementById('memory-price');
-//     const totalMemoryPrice = parseInt(totalMemory.value);
-
-// }
 
 function TotalPrice() {
     const totalMemory = document.getElementById('memory-price');
@@ -79,9 +32,7 @@ function TotalPrice() {
     const totaldeliveryPrice = parseInt(totaldelivery.innerText);
 
 
-    const lastMacprice = document.getElementById('fixed-price');
-
-    Macprice = 1299 + totalMemoryPrice + totalStoragePrice + totaldeliveryPrice;
+    const Macprice = 1299 + totalMemoryPrice + totalStoragePrice + totaldeliveryPrice;
 
     const MacTotal = document.getElementById('total-price');
     MacTotal.innerText = Macprice;
@@ -90,42 +41,19 @@ function TotalPrice() {
     pomoTotal.innerText = Macprice;
 
 
-
-
 }
 
-
-
-
+// choose Memory and added cost
 
 document.getElementById('memory1-button').addEventListener('click', function () {
-    // const memoryPrice = document.getElementById('memory-price');
-    // const memoryNewPrice = 0;
-    // memoryPrice.innerText = memoryNewPrice;
-    getmemoryPrice('memory', 0);
 
-    // const totalPriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(memoryNewPrice);
-    // totalPriceIncrease.innerText = newTotalPrice;
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
-
-
+    getProductsPrice('memory', 0);
 
 });
 
 document.getElementById('memory2-button').addEventListener('click', function () {
-    // const memoryPrice = document.getElementById('memory-price');
-    // const memoryNewPrice = 180;
-    // memoryPrice.innerText = memoryNewPrice;
-    getmemoryPrice('memory', 180);
 
-    // const totalPriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(memoryNewPrice);
-    // totalPriceIncrease.innerText = newTotalPrice;
-
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
+    getProductsPrice('memory', 180);
 
 });
 
@@ -133,42 +61,17 @@ document.getElementById('memory2-button').addEventListener('click', function () 
 // choose Storage and added cost
 
 document.getElementById('storage1-button').addEventListener('click', function () {
-    // const storagePrice = document.getElementById('storage-price');
-    // const storageNewPrice = 0;
-    // storagePrice.innerText = storageNewPrice;
-    getStoragePrice('storage', 0);
-
-
-    // const storagePriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(storageNewPrice);
-    // storagePriceIncrease.innerText = newTotalPrice;
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
+    getProductsPrice('storage', 0);
 
 });
 
-
 document.getElementById('storage2-button').addEventListener('click', function () {
-    getStoragePrice('storage', 100);
-
-
-    // const storagePriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(storageNewPrice);
-    // storagePriceIncrease.innerText = newTotalPrice;
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
+    getProductsPrice('storage', 100);
 
 });
 
 document.getElementById('storage3-button').addEventListener('click', function () {
-    getStoragePrice('storage', 180);
-
-
-    // const storagePriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(storageNewPrice);
-    // storagePriceIncrease.innerText = newTotalPrice;
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
+    getProductsPrice('storage', 180);
 
 });
 
@@ -176,39 +79,17 @@ document.getElementById('storage3-button').addEventListener('click', function ()
 // choose  delivery option and added cost
 
 document.getElementById('delivery1-button').addEventListener('click', function () {
-    // const deliveryPrice = document.getElementById('delivery-price');
-    // const newDeliveryPrice = 0;
-    // deliveryPrice.innerText = newDeliveryPrice;
-    getDeliveryPrice('delivery', 0);
+    getProductsPrice('delivery', 0);
 
-    // const deliveryPriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(newDeliveryPrice);
-    // deliveryPriceIncrease.innerText = newTotalPrice;
-
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
 });
 
 
 document.getElementById('delivery2-button').addEventListener('click', function () {
-    // const deliveryPrice = document.getElementById('delivery-price');
-    // const newDeliveryPrice = 20;
-    // deliveryPrice.innerText = newDeliveryPrice;
-    getDeliveryPrice('delivery', 20);
-
-    // const deliveryPriceIncrease = document.getElementById('total-price');
-    // const newTotalPrice = 1299 + parseInt(newDeliveryPrice);
-    // deliveryPriceIncrease.innerText = newTotalPrice;
-
-    // const pomoTotal = document.getElementById('pomo-Total');
-    // pomoTotal.innerText = newTotalPrice;
+    getProductsPrice('delivery', 20);
 
 });
 
-
-
-
-// bonus part
+// pomocode using for discount part
 
 document.getElementById('pomoApply').addEventListener('click', function () {
 
@@ -219,8 +100,5 @@ document.getElementById('pomoApply').addEventListener('click', function () {
         const discounttk = TotalCost * 20 / 100;
         const pomoCodeTotal = TotalCost - discounttk;
         discountTotal.innerText = pomoCodeTotal;
-    }
-    else {
-        console.log('kopal  kharap');
     }
 });
