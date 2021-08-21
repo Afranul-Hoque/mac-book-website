@@ -55,9 +55,12 @@
 
                             <div class="mb-4 pt-4">
                                 <h4>Choose your delivery option </h4>
-                                <button>Friday, Aug 25 FREE Prime Delivery </button>
-                                <button class="ms-2">Friday, Aug 21 Delivery charge $20</button>
+                                <button id="delivery1-button">Friday, Aug 25 FREE Prime Delivery </button>
+                                <button id="delivery2-button" class="ms-2">Friday, Aug 21 Delivery charge $20</button>
                             </div>
+
+
+
 
                             <!-- Mac pro purchage cost-->
 
@@ -72,7 +75,8 @@
                                 <h5> Extra Storage Cost <span class="storage">$</span> <span id="storage-price">0</span>
                                 </h5>
                                 <hr>
-                                <h5> Delivery charge <span class="delivery">$</span> <span>0</span> </h5>
+                                <h5> Delivery charge <span class="delivery">$</span> <span id="delivery-price">0</span>
+                                </h5>
 
                                 <hr class="hr-line">
 
@@ -86,8 +90,8 @@
                             <div>
                                 <h2>Add Pomo code</h2>
 
-                                <input class="pomoCode" class="form-control" type="text">
-                                <button>Apply</button>
+                                <input id="pomoInput" class="pomoCode" class="form-control" type="text">
+                                <button id="pomoApply">Apply</button>
                             </div>
 
 
@@ -100,7 +104,7 @@
 
         <hr>
         <div class="pb-4">
-            <h1 class="discount-price">Total : $<span>1299</span>
+            <h1 class="discount-price">Total : $<span id="pomo-Total">1299</span>
             </h1>
 
         </div>
