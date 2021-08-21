@@ -1,0 +1,44 @@
+hr
+{
+    width: 50%;
+}
+
+
+.best-Price
+{
+    margin-left: 110px;
+}
+.Memory
+{
+    margin-left: 25px;
+}
+.storage
+{
+    margin-left: 30px;
+}
+.delivery
+{
+    margin-left: 55px;
+}
+.hr-line
+{
+    border: 1px solid rgb(6, 7, 7);
+}
+.totalPrice
+{
+    margin-left: 100px;
+}
+
+.pomoCode
+{
+    margin-top: 10px;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.discount-price
+{
+    text-align: center;
+    font-size: 50px;
+    
+}
